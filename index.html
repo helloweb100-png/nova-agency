@@ -1,0 +1,646 @@
+<!doctype html>
+<html lang="es-MX">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>NOVA Agency | Agencia de marketing que hace brillar tu marca</title>
+  <meta name="description" content="NOVA Agency es una empresa de marketing: estrategia, redes sociales, publicidad digital, branding, diseño web y SEO para que tu marca se vea, se recuerde y venda. Pide tu estrategia.">
+  <meta name="keywords" content="agencia de marketing, marketing digital, publicidad digital, branding, diseño web, SEO, redes sociales, NOVA Agency">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#070818">
+  <meta name="color-scheme" content="dark">
+
+  <!-- Open Graph / redes -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_MX">
+  <meta property="og:site_name" content="NOVA Agency">
+  <meta property="og:title" content="NOVA Agency | Agencia de marketing que hace brillar tu marca">
+  <meta property="og:description" content="Estrategia, contenido, publicidad digital, branding y web en un solo equipo. Haz que tu marca brille donde tus clientes miran.">
+  <meta property="og:image" content="assets/logo-horizontal.jpg">
+  <meta property="og:image:alt" content="Logotipo de NOVA Agency en azul y violeta neón">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="NOVA Agency | Agencia de marketing">
+  <meta name="twitter:description" content="Haz que tu marca brille donde tus clientes miran.">
+  <meta name="twitter:image" content="assets/logo-horizontal.jpg">
+
+  <!-- Favicon: isotipo recortado del logo real -->
+  <link rel="icon" type="image/png" href="assets/marca.png">
+  <link rel="apple-touch-icon" href="assets/marca.png">
+
+  <!-- Tipografías: Sora (titulares), Manrope (texto), JetBrains Mono (etiquetas técnicas). Si fallan, el sistema usa sus fuentes. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Manrope:wght@300..800&family=Sora:wght@300..800&display=swap">
+  <link rel="preload" as="image" href="assets/logo-cuadrado.jpg">
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- La clase "js" activa los estados iniciales de animación. Si el script principal no arranca, a los 3.5 s se muestra todo. -->
+  <script>
+    document.documentElement.classList.add('js');
+    setTimeout(function () {
+      if (!window.__novaOK) { document.documentElement.classList.add('sin-js-ok'); }
+    }, 3500);
+  </script>
+  <noscript><style>.loader{display:none!important}</style></noscript>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": ["LocalBusiness", "ProfessionalService"],
+    "name": "NOVA Agency",
+    "description": "Empresa de marketing que une estrategia, contenido, publicidad digital, branding, diseño web y SEO para que las marcas se vean, se recuerden y vendan.",
+    "image": "assets/logo-horizontal.jpg",
+    "logo": "assets/marca.png",
+    "serviceType": ["Estrategia de marketing", "Redes sociales y contenido", "Publicidad digital", "Branding e identidad", "Diseño web y landing pages", "SEO y posicionamiento"]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {"@type": "Question", "name": "¿Qué servicios ofrece NOVA Agency?", "acceptedAnswer": {"@type": "Answer", "text": "Somos una empresa de marketing: estrategia, redes sociales y contenido, publicidad digital, branding, sitios web y SEO. Puedes contratar un servicio o una estrategia integral."
+        }
+      },
+      {"@type": "Question", "name": "¿Cómo empiezo a trabajar con NOVA Agency?", "acceptedAnswer": {"@type": "Answer", "text": "Cuéntanos sobre tu marca con el formulario de contacto. Platicamos tus objetivos y te preparamos una propuesta a la medida."
+        }
+      },
+      {"@type": "Question", "name": "¿Mi negocio es muy pequeño para una agencia?", "acceptedAnswer": {"@type": "Answer", "text": "Cada estrategia se adapta a la etapa, el presupuesto y los objetivos de tu empresa. Lo importante es que cada peso invertido tenga un propósito."
+        }
+      },
+      {"@type": "Question", "name": "¿Cuánto cuesta trabajar con una agencia de marketing?", "acceptedAnswer": {"@type": "Answer", "text": "Depende de lo que tu marca necesite. Después de conocerla te enviamos una propuesta clara, sin letras chiquitas."
+        }
+      },
+      {"@type": "Question", "name": "¿Cuándo veré resultados?", "acceptedAnswer": {"@type": "Answer", "text": "Depende del canal y del punto de partida: la publicidad puede mover la aguja pronto, mientras que el SEO y el branding construyen a mediano plazo. En tu propuesta te explicamos qué esperar y cómo lo medimos."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <!-- anime.js (versión fija, desde cdnjs). Es un extra: la página se ve completa aunque la CDN falle. -->
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+  <script defer src="script.js"></script>
+</head>
+
+<body class="is-loading">
+
+  <!-- Iconos reutilizables -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-spark" viewBox="0 0 24 24"><path d="M12 2l2.2 7.8L22 12l-7.8 2.2L12 22l-2.2-7.8L2 12l7.8-2.2z" fill="currentColor"/></symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M16 16l5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></symbol>
+  </svg>
+
+  <a class="skip" href="#contenido">Saltar al contenido</a>
+
+  <!-- ============ CARGADOR: “ignición” NOVA ============ -->
+  <div class="loader" id="loader" role="status" aria-live="polite">
+    <div class="loader__core" aria-hidden="true">
+      <i class="loader__ring r1"></i>
+      <i class="loader__ring r2"></i>
+      <i class="loader__ring r3"></i>
+      <span class="loader__halo"></span>
+      <img class="loader__logo" src="assets/marca.png" alt="" width="104" height="104">
+    </div>
+    <div class="loader__meta">
+      <span class="loader__label">Encendiendo NOVA</span>
+      <span class="loader__count"><b id="loaderCount">0</b>%</span>
+    </div>
+    <div class="loader__bar" aria-hidden="true"><i id="loaderBar"></i></div>
+    <span class="sr-only">Cargando NOVA Agency</span>
+  </div>
+
+  <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+
+  <!-- ============ NAVEGACIÓN ============ -->
+  <header class="nav" id="nav">
+    <div class="nav__pill">
+      <a class="brand" href="#inicio" aria-label="NOVA Agency, ir al inicio">
+        <img class="brand__mark" src="assets/marca.png" alt="" width="40" height="40">
+        <span class="brand__word">NOVA<small>AGENCY</small></span>
+      </a>
+      <nav class="nav__links" aria-label="Principal">
+        <a href="#servicios">Servicios</a>
+        <a href="#metodo">Método</a>
+        <a href="#porque">Por qué NOVA</a>
+        <a href="#faq">Preguntas</a>
+      </nav>
+      <a class="btn btn--sm btn--primary nav__cta" href="#contacto"><span>Quiero mi estrategia</span></a>
+      <button class="burger" id="burger" type="button" aria-expanded="false" aria-controls="menu" aria-label="Abrir menú">
+        <span></span><span></span>
+      </button>
+      <i class="nav__progress" id="navProgress" aria-hidden="true"></i>
+    </div>
+  </header>
+
+  <div class="menu" id="menu" aria-hidden="true">
+    <nav class="menu__nav" aria-label="Menú móvil">
+      <a href="#servicios"><small>01</small> Servicios</a>
+      <a href="#metodo"><small>02</small> Método</a>
+      <a href="#porque"><small>03</small> Por qué NOVA</a>
+      <a href="#faq"><small>04</small> Preguntas</a>
+      <a href="#contacto"><small>05</small> Contacto</a>
+    </nav>
+    <a class="btn btn--primary btn--block" href="#contacto"><span>Estoy listo para crecer</span><svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+  </div>
+
+  <!-- Riel lateral de progreso (escritorio) -->
+  <nav class="rail" id="rail" aria-label="Secciones de la página">
+    <a href="#inicio" data-label="Inicio"><i></i></a>
+    <a href="#servicios" data-label="Servicios"><i></i></a>
+    <a href="#metodo" data-label="Método"><i></i></a>
+    <a href="#porque" data-label="Por qué NOVA"><i></i></a>
+    <a href="#contacto" data-label="Contacto"><i></i></a>
+  </nav>
+
+  <div class="page">
+  <main id="contenido">
+
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="inicio" aria-labelledby="hero-title">
+      <div class="hero__bg" aria-hidden="true">
+        <i class="aurora a1" data-parallax="0.08"></i>
+        <i class="aurora a2" data-parallax="-0.06"></i>
+        <i class="aurora a3"></i>
+        <div class="dots" id="dotGrid"></div>
+        <canvas class="hero__canvas" id="heroCanvas"></canvas>
+        <span class="hero__vignette"></span>
+      </div>
+
+      <div class="hero__inner container" id="heroInner">
+        <div class="hero__copy">
+          <p class="chip" data-reveal data-delay="0">
+            <span class="chip__dot"></span>
+            <span>NOVA Agency · Empresa de marketing</span>
+          </p>
+          <h1 id="hero-title" class="hero__title split" data-delay="1">Haz que tu marca <em class="hl">brille</em> donde tus clientes miran.</h1>
+          <p class="hero__lead" data-reveal data-delay="3">Unimos estrategia, contenido y publicidad en un solo equipo para que tu empresa se vea, se recuerde y venda. Marketing con la energía de una estrella que acaba de estallar.</p>
+          <div class="hero__actions" data-reveal data-delay="4">
+            <a class="btn btn--primary btn--lg" href="#contacto" data-magnetic><span>Estoy listo para crecer</span><svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            <a class="btn btn--ghost btn--lg" href="#metodo"><span class="play" aria-hidden="true"></span><span>Ver cómo trabajamos</span></a>
+          </div>
+          <p class="hero__rotor" data-reveal data-delay="5">
+            <span class="hero__rotor-label">Marketing que genera</span>
+            <span class="rotor" aria-live="off">
+              <span class="is-on">clientes</span>
+              <span>confianza</span>
+              <span>ventas</span>
+              <span>comunidad</span>
+              <span>recomendaciones</span>
+            </span>
+          </p>
+        </div>
+
+        <div class="stage" id="stage" data-reveal="zoom" data-delay="2">
+          <div class="stage__glow" aria-hidden="true"></div>
+          <div class="stage__tilt" id="stageTilt">
+            <div class="stage__sway">
+              <i class="ring ring--a" aria-hidden="true"></i>
+              <i class="ring ring--b" aria-hidden="true"></i>
+              <i class="ring ring--c" aria-hidden="true"></i>
+              <div class="stage__float">
+                <figure class="stage__card">
+                  <img src="assets/logo-cuadrado.jpg" width="1024" height="1024" alt="Logotipo de NOVA Agency: una flecha ascendente en azul y violeta neón sobre las letras NOVA AGENCY" fetchpriority="high">
+                  <span class="stage__sheen" aria-hidden="true"></span>
+                </figure>
+                <svg class="stage__curve" viewBox="0 0 400 190" aria-hidden="true" focusable="false">
+                  <defs>
+                    <linearGradient id="gCurve" x1="0" y1="1" x2="1" y2="0">
+                      <stop offset="0" stop-color="#2f6bff"/><stop offset=".55" stop-color="#7a5cff"/><stop offset="1" stop-color="#c07bff"/>
+                    </linearGradient>
+                  </defs>
+                  <path class="curve-ghost" d="M8 172 L78 118 L112 146 L205 70 L240 98 L352 20"/>
+                  <path class="curve-live" pathLength="1" d="M8 172 L78 118 L112 146 L205 70 L240 98 L352 20"/>
+                  <circle class="curve-dot" r="6" cx="0" cy="0">
+                    <animateMotion dur="6s" repeatCount="indefinite" calcMode="linear" keyPoints="0;1;1" keyTimes="0;.6;1" path="M8 172 L78 118 L112 146 L205 70 L240 98 L352 20"/>
+                  </circle>
+                </svg>
+              </div>
+              <span class="fchip fc1"><svg class="ico" aria-hidden="true"><use href="#i-spark"/></svg>Estrategia</span>
+              <span class="fchip fc2"><i class="live"></i>Campaña activa</span>
+              <span class="fchip fc3"><svg class="ico" aria-hidden="true"><use href="#i-spark"/></svg>Contenido</span>
+              <span class="fchip fc4"><svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg>Crecimiento</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="ribbon" aria-hidden="true">
+        <div class="ribbon__track">
+          <span>Estrategia</span><span>Contenido</span><span>Publicidad digital</span><span>Branding</span><span>Diseño web</span><span>SEO</span><span>Analítica</span><span>Crecimiento</span>
+          <span>Estrategia</span><span>Contenido</span><span>Publicidad digital</span><span>Branding</span><span>Diseño web</span><span>SEO</span><span>Analítica</span><span>Crecimiento</span>
+        </div>
+      </div>
+
+      <a class="scrollcue" href="#manifiesto" aria-label="Seguir bajando"><span class="scrollcue__mouse"><i></i></span><span>Desliza</span></a>
+    </section>
+
+    <!-- ============ MANIFIESTO (texto que se enciende con el scroll) ============ -->
+    <section class="manifesto" id="manifiesto" aria-labelledby="mani-title">
+      <div class="manifesto__stick">
+        <div class="manifesto__bg" aria-hidden="true">
+          <span class="manifesto__giant" data-parallax="0.12">NOVA</span>
+          <i class="m-ring m1"></i><i class="m-ring m2"></i>
+        </div>
+        <div class="container manifesto__inner">
+          <h2 id="mani-title" class="eyebrow"><span class="eyebrow__n">01</span> Nuestra filosofía</h2>
+          <p class="manifesto__text" id="manifestoText">Las marcas que crecen no gritan más fuerte: se vuelven imposibles de ignorar. En NOVA Agency convertimos una idea en presencia, la presencia en confianza y la confianza en clientes que vuelven.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SERVICIOS (carril horizontal fijado al scroll) ============ -->
+    <section class="svc" id="servicios" aria-labelledby="svc-title">
+      <div class="svc__pin">
+        <header class="svc__head container">
+          <p class="eyebrow" data-reveal><span class="eyebrow__n">02</span> Servicios</p>
+          <h2 id="svc-title" class="h2 split">Todo el marketing que tu marca necesita para <em class="hl">despegar</em>.</h2>
+          <p class="lead" data-reveal data-delay="2">Seis disciplinas, un solo equipo y una sola visión: que tu empresa crezca. Elige una o combínalas en una estrategia completa.</p>
+          <div class="svc__hint" data-reveal data-delay="3" aria-hidden="true"><span>Desliza para explorar</span><svg class="ico"><use href="#i-arrow"/></svg></div>
+          <div class="svc__progress" aria-hidden="true"><i id="svcProgress"></i></div>
+        </header>
+
+        <div class="svc__viewport" id="svcViewport" tabindex="0" aria-label="Carrusel de servicios">
+          <ul class="svc__track" id="svcTrack">
+
+            <li class="panel">
+              <article class="panel__card spot">
+                <div class="viz viz-radar" aria-hidden="true"><i class="sweep"></i><span class="cross"></span><b style="--x:32%;--y:36%"></b><b style="--x:68%;--y:60%;--d:.9s"></b><b style="--x:55%;--y:22%;--d:1.7s"></b></div>
+                <span class="panel__n">01</span>
+                <h3>Estrategia de marketing</h3>
+                <p>Diagnóstico, posicionamiento y un plan claro. Sabrás qué hacer, en qué canal y por qué, antes de invertir un solo peso.</p>
+                <ul class="tags"><li>Diagnóstico</li><li>Posicionamiento</li><li>Plan de canales</li></ul>
+              </article>
+            </li>
+
+            <li class="panel">
+              <article class="panel__card spot">
+                <div class="viz viz-posts" aria-hidden="true">
+                  <div class="mini m1"><i></i><i class="s"></i></div>
+                  <div class="mini m2"><i></i><i class="s"></i></div>
+                  <div class="mini m3"><i></i><i class="s"></i><em></em></div>
+                </div>
+                <span class="panel__n">02</span>
+                <h3>Redes sociales y contenido</h3>
+                <p>Contenido que detiene el scroll y construye comunidad: ideas, diseño, calendario editorial y publicación constante.</p>
+                <ul class="tags"><li>Calendario editorial</li><li>Reels y video</li><li>Diseño de piezas</li></ul>
+              </article>
+            </li>
+
+            <li class="panel">
+              <article class="panel__card spot">
+                <div class="viz viz-funnel" aria-hidden="true">
+                  <span class="funnel"></span>
+                  <i style="--x:-62px;--dl:0s"></i><i style="--x:-30px;--dl:.5s"></i><i style="--x:8px;--dl:1s"></i><i style="--x:44px;--dl:1.5s"></i><i style="--x:70px;--dl:.25s"></i><i style="--x:-8px;--dl:1.25s"></i>
+                </div>
+                <span class="panel__n">03</span>
+                <h3>Publicidad digital</h3>
+                <p>Campañas que llegan a quien de verdad va a comprar, optimizadas todos los días para que cada anuncio trabaje más.</p>
+                <ul class="tags"><li>Meta Ads</li><li>Google Ads</li><li>Remarketing</li></ul>
+              </article>
+            </li>
+
+            <li class="panel">
+              <article class="panel__card spot">
+                <div class="viz viz-brand" aria-hidden="true"><div class="swirl"><b></b><b></b><b></b><b></b></div><span class="aa">Aa</span></div>
+                <span class="panel__n">04</span>
+                <h3>Branding e identidad</h3>
+                <p>Una identidad que se reconoce al primer vistazo: logotipo, paleta, tipografía y tono de voz con carácter propio.</p>
+                <ul class="tags"><li>Logotipo</li><li>Manual de marca</li><li>Tono de voz</li></ul>
+              </article>
+            </li>
+
+            <li class="panel">
+              <article class="panel__card spot">
+                <div class="viz viz-web" aria-hidden="true">
+                  <div class="win"><div class="win__bar"><i></i><i></i><i></i></div><div class="win__body"><span class="ln l1"></span><span class="ln l2"></span><span class="blk"></span><span class="blk b2"></span></div><em class="cursor"></em></div>
+                </div>
+                <span class="panel__n">05</span>
+                <h3>Sitios web y landing pages</h3>
+                <p>Páginas rápidas, hermosas y pensadas para convertir visitas en conversaciones reales con tu equipo de ventas.</p>
+                <ul class="tags"><li>Landing pages</li><li>Sitios corporativos</li><li>Optimización móvil</li></ul>
+              </article>
+            </li>
+
+            <li class="panel">
+              <article class="panel__card spot">
+                <div class="viz viz-seo" aria-hidden="true">
+                  <div class="search"><svg class="ico"><use href="#i-search"/></svg><span class="typing">agencia de marketing</span></div>
+                  <div class="bars"><i style="--h:34%;--dl:0s"></i><i style="--h:48%;--dl:.2s"></i><i style="--h:42%;--dl:.4s"></i><i style="--h:66%;--dl:.6s"></i><i style="--h:78%;--dl:.8s"></i><i style="--h:94%;--dl:1s"></i></div>
+                </div>
+                <span class="panel__n">06</span>
+                <h3>SEO y posicionamiento</h3>
+                <p>Haz que te encuentren justo cuando te buscan: SEO local, contenido útil y analítica para seguir subiendo posiciones.</p>
+                <ul class="tags"><li>SEO local</li><li>Contenido</li><li>Analítica</li></ul>
+              </article>
+            </li>
+
+            <li class="panel panel--cta">
+              <article class="panel__card panel__card--cta">
+                <span class="panel__n">→</span>
+                <h3>¿Listo para que tu marca despegue?</h3>
+                <p>Cuéntanos tu idea. Armamos contigo el plan que tu marca necesita.</p>
+                <a class="btn btn--primary" href="#contacto" data-magnetic><span>Quiero esto para mi marca</span><svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+              </article>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ MÉTODO (tema claro, trayectoria que se dibuja con el scroll) ============ -->
+    <section class="method" id="metodo" aria-labelledby="met-title">
+      <div class="container">
+        <header class="method__head">
+          <p class="eyebrow eyebrow--ink" data-reveal><span class="eyebrow__n">03</span> Método NOVA</p>
+          <h2 id="met-title" class="h2 h2--ink split">De la chispa a la órbita: un camino claro para <em class="hl hl--ink">crecer</em>.</h2>
+          <p class="lead lead--ink" data-reveal data-delay="2">Cada marca es distinta, pero todas crecen igual: con un plan, ejecución constante y ajustes inteligentes. Así lo hacemos, paso a paso.</p>
+        </header>
+
+        <div class="steps" id="steps">
+          <svg class="method__path" viewBox="0 0 1200 600" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+            <defs>
+              <linearGradient id="gPath" x1="0" y1="1" x2="1" y2="0">
+                <stop offset="0" stop-color="#2f6bff"/><stop offset=".6" stop-color="#7a5cff"/><stop offset="1" stop-color="#a855ff"/>
+              </linearGradient>
+            </defs>
+            <path class="mp-ghost" d="M0 590 L190 440 L270 500 L560 280 L650 340 L940 130 L1010 180 L1180 30"/>
+            <path class="mp-live" id="mpLive" pathLength="1" d="M0 590 L190 440 L270 500 L560 280 L650 340 L940 130 L1010 180 L1180 30"/>
+            <path class="mp-head" id="mpHead" d="M1110 38 L1180 30 L1164 98"/>
+          </svg>
+          <div class="method__rail" aria-hidden="true"><i></i></div>
+
+          <ol class="steps__list">
+            <li class="step" data-reveal>
+              <span class="step__node" aria-hidden="true"></span>
+              <span class="step__k">Chispa</span>
+              <h3>Diagnóstico</h3>
+              <p>Escuchamos tu historia, analizamos tu mercado y detectamos dónde está tu mayor oportunidad.</p>
+              <span class="step__n" aria-hidden="true">01</span>
+            </li>
+            <li class="step" data-reveal data-delay="1">
+              <span class="step__node" aria-hidden="true"></span>
+              <span class="step__k">Ignición</span>
+              <h3>Estrategia</h3>
+              <p>Definimos mensaje, canales y plan de acción con objetivos claros y un camino para alcanzarlos.</p>
+              <span class="step__n" aria-hidden="true">02</span>
+            </li>
+            <li class="step" data-reveal data-delay="2">
+              <span class="step__node" aria-hidden="true"></span>
+              <span class="step__k">Expansión</span>
+              <h3>Lanzamiento</h3>
+              <p>Creamos, publicamos y activamos tus campañas con un equipo enfocado en ejecutar con calidad.</p>
+              <span class="step__n" aria-hidden="true">03</span>
+            </li>
+            <li class="step" data-reveal data-delay="3">
+              <span class="step__node" aria-hidden="true"></span>
+              <span class="step__k">Órbita</span>
+              <h3>Optimización</h3>
+              <p>Medimos, ajustamos y escalamos lo que funciona. Siempre sabrás qué está pasando con tu marca.</p>
+              <span class="step__n" aria-hidden="true">04</span>
+            </li>
+          </ol>
+        </div>
+
+        <div class="method__cta" data-reveal>
+          <p>¿Quieres ver cómo se vería este camino con tu empresa?</p>
+          <a class="btn btn--dark btn--lg" href="#contacto" data-magnetic><span>Empecemos mi diagnóstico</span><svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ BANDAS TIPOGRÁFICAS (se desplazan con el scroll) ============ -->
+    <section class="bands" aria-label="Lo que hacemos en una frase">
+      <div class="band" data-dir="-1">
+        <div class="band__row"><div class="band__track" aria-hidden="true">
+          <span>Crea</span><i></i><span class="o">Conecta</span><i></i><span>Convierte</span><i></i>
+          <span>Crea</span><i></i><span class="o">Conecta</span><i></i><span>Convierte</span><i></i>
+        </div></div>
+      </div>
+      <div class="band band--b" data-dir="1">
+        <div class="band__row"><div class="band__track band__track--rev" aria-hidden="true">
+          <span class="o">Estrategia</span><i></i><span>Contenido</span><i></i><span class="o">Publicidad</span><i></i>
+          <span class="o">Estrategia</span><i></i><span>Contenido</span><i></i><span class="o">Publicidad</span><i></i>
+        </div></div>
+      </div>
+      <p class="sr-only">Creamos, conectamos y convertimos: estrategia, contenido y publicidad.</p>
+    </section>
+
+    <!-- ============ IMPACTO (el marco se abre a pantalla completa con el scroll) ============ -->
+    <section class="expand" id="impacto" aria-labelledby="imp-title">
+      <div class="expand__stick">
+        <div class="expand__frame" id="expandFrame">
+          <img class="expand__photo" data-stock src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1600&q=70" alt="Panel de analítica de marketing en una laptop, con gráficas de crecimiento" loading="lazy" width="1600" height="1067">
+          <img class="expand__logo" src="assets/logo-horizontal.jpg" alt="Logotipo horizontal de NOVA Agency en azul y violeta neón" loading="lazy" width="1600" height="900">
+          <span class="expand__shade" aria-hidden="true"></span>
+          <div class="expand__copy" id="expandCopy">
+            <p class="eyebrow"><span class="eyebrow__n">04</span> Tu marca, en grande</p>
+            <h2 id="imp-title" class="h2 expand__title">Cuando tu marca se ve y se siente así, vender se vuelve natural.</h2>
+            <a class="btn btn--primary btn--lg" href="#contacto" data-magnetic><span>Haz clic y platiquemos</span><svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ POR QUÉ NOVA (bento animado) ============ -->
+    <section class="why" id="porque" aria-labelledby="why-title">
+      <div class="container">
+        <header class="why__head">
+          <p class="eyebrow" data-reveal><span class="eyebrow__n">05</span> Por qué NOVA</p>
+          <h2 id="why-title" class="h2 split">No somos un proveedor más. Somos el equipo que empuja tu marca <em class="hl">hacia arriba</em>.</h2>
+        </header>
+
+        <div class="bento">
+          <article class="tile tile--chart spot" data-reveal>
+            <div class="tile__viz chart" aria-hidden="true">
+              <i style="--h:22%;--dl:0s"></i><i style="--h:32%;--dl:.15s"></i><i style="--h:28%;--dl:.3s"></i><i style="--h:44%;--dl:.45s"></i><i style="--h:40%;--dl:.6s"></i><i style="--h:58%;--dl:.75s"></i><i style="--h:66%;--dl:.9s"></i><i style="--h:62%;--dl:1.05s"></i><i style="--h:82%;--dl:1.2s"></i><i style="--h:96%;--dl:1.35s"></i>
+              <svg viewBox="0 0 300 120" preserveAspectRatio="none" focusable="false"><path pathLength="1" d="M0 104 L40 82 L62 92 L120 58 L148 70 L214 30 L238 42 L296 6"/></svg>
+            </div>
+            <h3>Estrategia antes que publicaciones</h3>
+            <p>Primero entendemos tu empresa y tu mercado. Después creamos. Cada pieza, cada anuncio y cada página tiene un objetivo claro.</p>
+          </article>
+
+          <article class="tile tile--blob spot" data-reveal data-delay="1">
+            <div class="tile__viz blob" aria-hidden="true"><i></i><i></i></div>
+            <h3>Creatividad que se nota</h3>
+            <p>Ideas y diseño con carácter propio, para que nadie confunda tu marca con la de al lado.</p>
+          </article>
+
+          <article class="tile tile--orb spot" data-reveal>
+            <div class="tile__viz orb" aria-hidden="true"><span class="core"></span><span class="o1"><b></b></span><span class="o2"><b></b></span><span class="o3"><b></b></span></div>
+            <h3>Todo en un mismo equipo</h3>
+            <p>Estrategia, contenido, publicidad, branding y web bajo el mismo techo: menos fricción, más coherencia.</p>
+          </article>
+
+          <article class="tile tile--meters spot" data-reveal data-delay="1">
+            <div class="tile__viz meters" aria-hidden="true">
+              <div><span>Alcance</span><em><i style="--w:86%;--dl:0s"></i></em></div>
+              <div><span>Interacción</span><em><i style="--w:64%;--dl:.4s"></i></em></div>
+              <div><span>Prospectos</span><em><i style="--w:72%;--dl:.8s"></i></em></div>
+              <div><span>Conversión</span><em><i style="--w:50%;--dl:1.2s"></i></em></div>
+            </div>
+            <h3>Métricas que sí importan</h3>
+            <p>Medimos lo que mueve a tu empresa y te lo explicamos en lenguaje claro, sin tecnicismos.</p>
+          </article>
+
+          <article class="tile tile--chat spot" data-reveal data-delay="2">
+            <div class="tile__viz chat" aria-hidden="true">
+              <p class="b b1">¿Cómo va mi campaña?</p>
+              <p class="b b2">Te lo explicamos paso a paso.</p>
+              <p class="b b3"><i></i><i></i><i></i></p>
+            </div>
+            <h3>Comunicación directa</h3>
+            <p>Hablas con las personas que ejecutan tu proyecto. Sin intermediarios, sin vueltas.</p>
+          </article>
+
+          <article class="tile tile--flow spot" data-reveal>
+            <div class="flow" aria-hidden="true">
+              <span class="flow__n"><b>Atención</b></span><span class="flow__line"><i></i></span>
+              <span class="flow__n"><b>Interés</b></span><span class="flow__line"><i></i></span>
+              <span class="flow__n"><b>Contacto</b></span><span class="flow__line"><i></i></span>
+              <span class="flow__n flow__n--end"><b>Cliente</b></span>
+            </div>
+            <div class="flow__copy">
+              <h3>Diseñado para convertir</h3>
+              <p>Cada mensaje, anuncio y página tiene un camino claro: de la atención al contacto, y del contacto a un cliente feliz.</p>
+              <a class="btn btn--ghost" href="#contacto"><span>Clic aquí y conversemos</span><svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PREGUNTAS FRECUENTES ============ -->
+    <section class="faq" id="faq" aria-labelledby="faq-title">
+      <div class="container faq__wrap">
+        <header class="faq__head">
+          <p class="eyebrow" data-reveal><span class="eyebrow__n">06</span> Preguntas frecuentes</p>
+          <h2 id="faq-title" class="h2 split">Resolvemos tus dudas antes de que empieces.</h2>
+          <p class="lead" data-reveal data-delay="2">Si no encuentras la tuya, escríbenos. Respondemos con gusto.</p>
+        </header>
+
+        <div class="faq__list" data-reveal>
+          <details name="faq" open>
+            <summary><span>¿Qué servicios ofrece NOVA Agency?</span><i class="faq__ico" aria-hidden="true"></i></summary>
+            <div class="faq__a"><p>Somos una empresa de marketing: estrategia, redes sociales y contenido, publicidad digital, branding, sitios web y SEO. Puedes contratar un servicio o una estrategia integral.</p></div>
+          </details>
+          <details name="faq">
+            <summary><span>¿Cómo empiezo a trabajar con ustedes?</span><i class="faq__ico" aria-hidden="true"></i></summary>
+            <div class="faq__a"><p>Cuéntanos sobre tu marca con el formulario de contacto. Platicamos tus objetivos y te preparamos una propuesta a la medida.</p></div>
+          </details>
+          <details name="faq">
+            <summary><span>¿Mi negocio es muy pequeño para una agencia?</span><i class="faq__ico" aria-hidden="true"></i></summary>
+            <div class="faq__a"><p>Cada estrategia se adapta a la etapa, el presupuesto y los objetivos de tu empresa. Lo importante es que cada peso invertido tenga un propósito.</p></div>
+          </details>
+          <details name="faq">
+            <summary><span>¿Cuánto cuesta trabajar con una agencia de marketing?</span><i class="faq__ico" aria-hidden="true"></i></summary>
+            <div class="faq__a"><p>Depende de lo que tu marca necesite. Después de conocerla te enviamos una propuesta clara, sin letras chiquitas.</p></div>
+          </details>
+          <details name="faq">
+            <summary><span>¿Cuándo veré resultados?</span><i class="faq__ico" aria-hidden="true"></i></summary>
+            <div class="faq__a"><p>Depende del canal y del punto de partida: la publicidad puede mover la aguja pronto, mientras que el SEO y el branding construyen a mediano plazo. En tu propuesta te explicamos qué esperar y cómo lo medimos.</p></div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACTO ============ -->
+    <section class="contact" id="contacto" aria-labelledby="con-title">
+      <div class="contact__bg" aria-hidden="true">
+        <i class="burst"></i><i class="c-ring c1"></i><i class="c-ring c2"></i><i class="c-ring c3"></i>
+      </div>
+      <div class="container contact__grid">
+        <div class="contact__copy">
+          <p class="eyebrow" data-reveal><span class="eyebrow__n">07</span> Contacto</p>
+          <h2 id="con-title" class="h2 h2--xl split">Tu siguiente nivel empieza con un <em class="hl">mensaje</em>.</h2>
+          <p class="lead" data-reveal data-delay="2">Cuéntanos qué quieres lograr. Armamos tu mensaje y lo enviamos directo a WhatsApp para que platiquemos sin vueltas.</p>
+          <ul class="checks" data-reveal data-delay="3">
+            <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>Un diagnóstico pensado para tu empresa</li>
+            <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>Propuesta a la medida, sin plantillas</li>
+            <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>Hablas directo con quien ejecuta</li>
+          </ul>
+        </div>
+
+        <form class="form spot" id="leadForm" data-reveal data-delay="2" aria-label="Formulario de contacto">
+          <div class="form__top"><span class="form__dot"></span><span>Tu brief, en 30 segundos</span></div>
+          <div class="field">
+            <label for="f-nombre">Tu nombre</label>
+            <input id="f-nombre" name="nombre" type="text" autocomplete="name" required placeholder="¿Cómo te llamas?">
+          </div>
+          <div class="field">
+            <label for="f-negocio">Tu empresa</label>
+            <input id="f-negocio" name="negocio" type="text" autocomplete="organization" placeholder="Nombre o giro de tu empresa">
+          </div>
+          <fieldset class="field">
+            <legend>¿Qué quieres impulsar?</legend>
+            <div class="chips">
+              <label class="cc"><input type="checkbox" name="interes" value="Estrategia de marketing"><span>Estrategia</span></label>
+              <label class="cc"><input type="checkbox" name="interes" value="Redes sociales y contenido"><span>Redes sociales</span></label>
+              <label class="cc"><input type="checkbox" name="interes" value="Publicidad digital"><span>Publicidad</span></label>
+              <label class="cc"><input type="checkbox" name="interes" value="Branding"><span>Branding</span></label>
+              <label class="cc"><input type="checkbox" name="interes" value="Sitio web"><span>Sitio web</span></label>
+              <label class="cc"><input type="checkbox" name="interes" value="SEO"><span>SEO</span></label>
+            </div>
+          </fieldset>
+          <div class="field">
+            <label for="f-meta">Tu meta</label>
+            <textarea id="f-meta" name="meta" rows="3" placeholder="Cuéntanos qué quieres lograr con tu marca"></textarea>
+          </div>
+          <button class="btn btn--primary btn--block btn--lg form__submit" type="submit" data-magnetic><svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg><span>Quiero mi estrategia por WhatsApp</span></button>
+          <p class="form__note form__note--wa">Al enviar se abre WhatsApp con tu mensaje ya escrito. Sin compromiso.</p>
+          <p class="form__soon" role="note"><span class="form__dot"></span>Estamos activando nuestro canal de contacto directo. Muy pronto podrás escribirnos desde aquí.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ PIE ============ -->
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <img class="footer__logo" src="assets/logo-horizontal.jpg" alt="NOVA Agency, logotipo horizontal" width="1600" height="900" loading="lazy">
+        <p>NOVA Agency es una empresa de marketing que une estrategia, contenido y publicidad para que tu marca brille donde tus clientes miran.</p>
+      </div>
+      <nav class="footer__col" aria-label="Pie de página">
+        <h2>Explora</h2>
+        <a href="#servicios">Servicios</a>
+        <a href="#metodo">Método</a>
+        <a href="#porque">Por qué NOVA</a>
+        <a href="#faq">Preguntas frecuentes</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+      <div class="footer__col">
+        <h2>Servicios</h2>
+        <span>Estrategia de marketing</span>
+        <span>Redes sociales y contenido</span>
+        <span>Publicidad digital</span>
+        <span>Branding e identidad</span>
+        <span>Sitios web y SEO</span>
+      </div>
+      <div class="footer__col footer__col--cta">
+        <h2>¿Hablamos?</h2>
+        <p>Tu marca ya tiene con qué brillar. Nosotros ponemos la ignición.</p>
+        <a class="btn btn--primary" href="#contacto"><span>Quiero mi estrategia</span><svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      </div>
+    </div>
+    <div class="footer__giant" aria-hidden="true">NOVA</div>
+    <div class="container footer__legal">
+      <p>© <span id="year">2026</span> NOVA Agency. Todos los derechos reservados.</p>
+      <a href="#inicio">Volver arriba ↑</a>
+    </div>
+  </footer>
+  </div>
+
+  <!-- Botón flotante de WhatsApp (se activa solo si hay número en script.js) -->
+  <a class="wa" id="waFloat" href="#contacto" target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp" hidden>
+    <span class="wa__pulse" aria-hidden="true"></span>
+    <svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg>
+    <span class="wa__tip">Escríbenos por WhatsApp</span>
+  </a>
+
+</body>
+</html>
