@@ -511,6 +511,12 @@ body.menu-open { overflow: hidden; }
 .checks { display: grid; gap: 14px; margin-top: 30px; list-style: none; }
 .checks li { display: flex; align-items: center; gap: 12px; font-weight: 600; }
 .checks .ico { width: 24px; height: 24px; padding: 5px; border-radius: 50%; background: var(--grad); color: #fff; }
+.sales { display: grid; gap: 14px; margin-top: 30px; padding-top: 24px; border-top: 1px solid var(--line); }
+.sales__title { margin: 0; font: 500 .72rem/1 var(--ff-mono); letter-spacing: .2em; text-transform: uppercase; color: var(--cyan); }
+.sales__list { display: flex; flex-wrap: wrap; gap: 10px; margin: 0; padding: 0; list-style: none; }
+.sales__list a { display: inline-flex; align-items: center; gap: 10px; padding: 12px 18px; border-radius: 999px; border: 1px solid var(--line-2); background: rgba(255, 255, 255, .04); font: 700 1rem/1 var(--ff-display); letter-spacing: .02em; color: var(--text); transition: border-color .3s, background .3s; }
+.sales__list a:hover { border-color: rgba(176, 117, 255, .7); background: rgba(139, 77, 255, .12); }
+.sales__list .ico { width: 18px; height: 18px; color: var(--cyan); }
 
 .form { position: relative; display: grid; gap: 18px; padding: 24px 20px 26px; border-radius: 30px; isolation: isolate; overflow: hidden; background: linear-gradient(160deg, rgba(26, 30, 88, .82), rgba(9, 11, 36, .94)); border: 1px solid var(--line-2); backdrop-filter: blur(14px); box-shadow: 0 40px 100px -40px rgba(80, 90, 255, .7); }
 .form__top { display: flex; align-items: center; gap: 10px; font: 500 .72rem/1 var(--ff-mono); letter-spacing: .16em; text-transform: uppercase; color: var(--cyan); }

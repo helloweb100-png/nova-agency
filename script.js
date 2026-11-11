@@ -15,7 +15,7 @@
   /* ---------- 0. CONFIGURACIÓN ---------- */
   // Número de WhatsApp del negocio: 10 dígitos con lada, sin +52 (ej. '5512345678').
   // Vacío = el negocio aún no entregó su número: el botón flotante y el envío del formulario se ocultan solos.
-  const WHATSAPP_NUMBER = '';
+  const WHATSAPP_NUMBER = '3317483951';
   const WA_SALUDO = 'Hola NOVA Agency 👋';
 
   /* ---------- 1. UTILIDADES ---------- */
